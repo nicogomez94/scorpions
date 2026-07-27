@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Scorpions — indumentaria masculina, accesorios y calzado de carácter."
+    />
+    <meta property="og:title" content="Scorpions — Carácter que se lleva puesto" />
+    <meta name="theme-color" content="#0b0a09" />
+    <title>Scorpions — Tienda masculina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Oswald:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      <p>Envíos gratis desde $120.000</p>
+      <span aria-hidden="true"></span>
+      <p>3 cuotas sin interés</p>
+    </div>
+
+    <header class="site-header" id="site-header">
+      <a class="brand" href="#inicio" aria-label="Scorpions, ir al inicio">
+        <span class="brand-mark">S</span>
+        <span class="brand-name">SCORPIONS</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="#catalogo" data-nav="catalogo">Nueva temporada</a>
+        <a href="#catalogo" data-category-link="Abrigos">Abrigos</a>
+        <a href="#catalogo" data-category-link="Remeras">Remeras</a>
+        <a href="#catalogo" data-category-link="Accesorios">Accesorios</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button search-trigger" type="button" aria-label="Buscar productos">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="icon-button cart-trigger" type="button" aria-label="Abrir carrito">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button
+          class="icon-button menu-trigger"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <aside
+      class="mobile-menu"
+      id="mobile-menu"
+      aria-label="Menú móvil"
+      aria-hidden="true"
+      inert
+    >
+      <div class="mobile-menu-top">
+        <span>MENÚ</span>
+        <button class="icon-button menu-close" type="button" aria-label="Cerrar menú">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <nav aria-label="Navegación móvil">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Nueva temporada</a>
+        <a href="#catalogo" data-category-link="Abrigos">Abrigos</a>
+        <a href="#catalogo" data-category-link="Remeras">Remeras</a>
+        <a href="#catalogo" data-category-link="Accesorios">Accesorios</a>
+      </nav>
+      <p>Diseñado en Argentina.<br />Hecho para durar.</p>
+    </aside>
+
+    <main id="app">
+      <div class="view" id="home-view">
+        <section class="hero" id="inicio">
+          <div class="hero-media" aria-hidden="true"></div>
+          <div class="hero-grain" aria-hidden="true"></div>
+          <div class="hero-content fade-in">
+            <p class="eyebrow">COLECCIÓN 01 — 2026</p>
+            <h1>CARÁCTER<br />SIN RUIDO.</h1>
+            <p class="hero-copy">
+              Prendas esenciales, materiales honestos y una silueta que no pide permiso.
+            </p>
+            <a class="button button-primary" href="#catalogo">
+              Ver colección
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="hero-index">
+            <span>SC / 01</span>
+            <span>BUENOS AIRES</span>
+          </div>
+          <a class="scroll-cue" href="#catalogo" aria-label="Bajar al catálogo">
+            <span>DESCUBRIR</span>
+            <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </section>
+
+        <section class="catalog-section section-shell fade-in" id="catalogo">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">PIEZAS ESENCIALES</p>
+              <h2>NUEVA TEMPORADA</h2>
+            </div>
+            <p class="section-intro">
+              Una selección precisa para moverte entre la ciudad y la noche sin cambiar de
+              uniforme.
+            </p>
+          </div>
+
+          <div class="catalog-toolbar">
+            <div class="category-pills" role="group" aria-label="Filtrar por categoría">
+              <button class="filter-pill active" type="button" data-category="Todos">Todo</button>
+              <button class="filter-pill" type="button" data-category="Abrigos">Abrigos</button>
+              <button class="filter-pill" type="button" data-category="Remeras">Remeras</button>
+              <button class="filter-pill" type="button" data-category="Pantalones">Pantalones</button>
+              <button class="filter-pill" type="button" data-category="Accesorios">Accesorios</button>
+            </div>
+            <div class="catalog-tools">
+              <span id="results-count">6 productos</span>
+              <label class="sort-control">
+                <span class="sr-only">Ordenar productos</span>
+                <select id="sort-select">
+                  <option value="featured">Destacados</option>
+                  <option value="price-asc">Menor precio</option>
+                  <option value="price-desc">Mayor precio</option>
+                </select>
+                <i class="fa-solid fa-chevron-down"></i>
+              </label>
+            </div>
+          </div>
+
+          <div class="product-grid" id="product-grid" aria-live="polite"></div>
+          <div class="catalog-empty" id="catalog-empty" hidden>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>No encontramos esa pieza</h3>
+            <p>Probá con otro término o recorré toda la colección.</p>
+            <button class="text-button" id="clear-search" type="button">Ver todo</button>
+          </div>
+        </section>
+
+        <section class="manifesto fade-in">
+          <div class="manifesto-number">01</div>
+          <div class="manifesto-copy">
+            <p class="eyebrow">NUESTRO CÓDIGO</p>
+            <h2>MENOS PIEZAS.<br />MÁS PRESENCIA.</h2>
+            <p>
+              Diseñamos prendas que envejecen bien. Géneros con cuerpo, terminaciones precisas
+              y una paleta hecha para combinar sin esfuerzo.
+            </p>
+            <a class="text-link" href="#catalogo">Conocé la colección <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="manifesto-detail">
+            <span>Algodón pesado</span>
+            <span>Cuero genuino</span>
+            <span>Series limitadas</span>
+          </div>
+        </section>
+
+        <section class="benefits section-shell fade-in" aria-label="Beneficios de compra">
+          <article class="benefit-card">
+            <i class="fa-solid fa-truck-fast"></i>
+            <h3>Envío a todo el país</h3>
+            <p>Gratis en compras superiores a $120.000.</p>
+          </article>
+          <article class="benefit-card">
+            <i class="fa-solid fa-rotate-left"></i>
+            <h3>Cambios simples</h3>
+            <p>Tenés 30 días para cambiar talle o producto.</p>
+          </article>
+          <article class="benefit-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Compra segura</h3>
+            <p>Tus datos y tu pago siempre protegidos.</p>
+          </article>
+        </section>
+
+        <section class="newsletter fade-in">
+          <div>
+            <p class="eyebrow">ACCESO ANTICIPADO</p>
+            <h2>ENTRÁ AL CÍRCULO.</h2>
+            <p>Recibí lanzamientos, reposiciones y beneficios antes que nadie.</p>
+          </div>
+          <form id="newsletter-form">
+            <label class="sr-only" for="newsletter-email">Tu correo electrónico</label>
+            <input id="newsletter-email" type="email" placeholder="tu@email.com" required />
+            <button type="submit" aria-label="Suscribirme al newsletter">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </section>
+      </div>
+
+      <div class="view product-view" id="product-view" hidden></div>
+      <div class="view checkout-view" id="checkout-view" hidden></div>
+      <div class="view success-view" id="success-view" hidden></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio">
+          <span class="brand-mark">S</span>
+          <span class="brand-name">SCORPIONS</span>
+        </a>
+        <p>Prendas con carácter para todos los días.</p>
+      </div>
+      <div>
+        <h3>Tienda</h3>
+        <a href="#catalogo">Nueva temporada</a>
+        <a href="#catalogo" data-category-link="Abrigos">Abrigos</a>
+        <a href="#catalogo" data-category-link="Accesorios">Accesorios</a>
+      </div>
+      <div>
+        <h3>Ayuda</h3>
+        <a href="#envios">Envíos</a>
+        <a href="#cambios">Cambios y devoluciones</a>
+        <a href="#talles">Guía de talles</a>
+      </div>
+      <div>
+        <h3>Seguinos</h3>
+        <a href="#instagram">Instagram</a>
+        <a href="#tiktok">TikTok</a>
+        <a href="https://wa.me/5491123456789" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Scorpions. Todos los derechos reservados.</p>
+        <p>EST. MMXXIV — BUENOS AIRES</p>
+      </div>
+    </footer>
+
+    <div class="search-panel" id="search-panel" aria-hidden="true" inert>
+      <div class="search-panel-inner">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <label class="sr-only" for="search-input">Buscar en la tienda</label>
+        <input
+          id="search-input"
+          type="search"
+          placeholder="¿Qué estás buscando?"
+          autocomplete="off"
+        />
+        <button class="icon-button search-close" type="button" aria-label="Cerrar búsqueda">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="search-suggestions">
+        <span>Búsquedas populares</span>
+        <button type="button" data-search-term="campera">Camperas</button>
+        <button type="button" data-search-term="remera">Remeras</button>
+        <button type="button" data-search-term="cuero">Cuero</button>
+      </div>
+    </div>
+
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <aside
+      class="cart-drawer"
+      id="cart-drawer"
+      aria-label="Carrito de compras"
+      aria-hidden="true"
+      inert
+    >
+      <div class="drawer-header">
+        <div>
+          <p class="eyebrow">TU SELECCIÓN</p>
+          <h2>CARRITO <span id="drawer-count">(0)</span></h2>
+        </div>
+        <button class="icon-button cart-close" type="button" aria-label="Cerrar carrito">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="shipping-progress">
+        <p id="shipping-message">Sumá productos para acceder al envío gratis.</p>
+        <div class="progress-track"><span id="shipping-progress-bar"></span></div>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty">
+        <div class="empty-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+        <h3>Tu carrito está vacío</h3>
+        <p>Elegí una pieza y volvé cuando estés listo.</p>
+        <button class="button button-secondary cart-continue" type="button">Explorar colección</button>
+      </div>
+      <div class="drawer-summary" id="drawer-summary" hidden>
+        <div><span>Subtotal</span><strong id="cart-subtotal">$0</strong></div>
+        <p>Envío calculado en el checkout.</p>
+        <button class="button button-primary checkout-trigger" type="button">
+          Iniciar compra <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button class="text-button cart-continue" type="button">Seguir comprando</button>
+      </div>
+    </aside>
+
+    <div class="size-guide-modal" id="size-guide-modal" aria-hidden="true" inert>
+      <div class="modal-card">
+        <button class="icon-button size-guide-close" type="button" aria-label="Cerrar guía de talles">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <p class="eyebrow">MEDIDAS EN CM</p>
+        <h2>GUÍA DE TALLES</h2>
+        <table>
+          <thead>
+            <tr><th>Talle</th><th>Pecho</th><th>Cintura</th><th>Cadera</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>S</td><td>88–94</td><td>74–80</td><td>90–96</td></tr>
+            <tr><td>M</td><td>95–101</td><td>81–87</td><td>97–103</td></tr>
+            <tr><td>L</td><td>102–108</td><td>88–94</td><td>104–110</td></tr>
+            <tr><td>XL</td><td>109–116</td><td>95–103</td><td>111–118</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <i class="fa-solid fa-check"></i>
+      <span>Producto agregado al carrito</span>
+    </div>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/5491123456789?text=Hola%20Scorpions%2C%20necesito%20ayuda%20con%20mi%20compra"
+      target="_blank"
+      rel="noopener"
+      aria-label="Consultar por WhatsApp"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>¿Te ayudamos?</span>
+    </a>
+
+    <script src="main.js"></script>
+  </body>
+</html>
