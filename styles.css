@@ -329,7 +329,7 @@ img {
 }
 
 .hero h1 {
-  font-size: clamp(4.1rem, 11vw, 8.5rem);
+  font-size: clamp(3.25rem, 8.5vw, 6.1rem);
 }
 
 .hero-copy {
@@ -1811,7 +1811,7 @@ img {
   }
 
   .hero h1 {
-    font-size: clamp(5.4rem, 10vw, 8.5rem);
+    font-size: clamp(3.9rem, 7.5vw, 6.1rem);
   }
 
   .product-grid {

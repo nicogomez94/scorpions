@@ -85,21 +85,20 @@ const products = [
     sizes: ["Único"],
   },
   {
-    id: "campera-cuero-ruta",
-    name: "Campera Cuero Ruta",
+    id: "sweater-waffle",
+    name: "Sweater Waffle",
     category: "Abrigos",
-    price: 286000,
-    badge: "Pieza insignia",
-    image:
-      "https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?auto=format&fit=crop&w=1300&q=88",
-    imageAlt: "Campera masculina de cuero marrón oscuro",
+    price: 21997,
+    badge: "Más vendido",
+    image: "assets/sweater-waffle.webp",
+    imageAlt: "Hombre con sweater waffle beige de cuello redondo",
     description:
-      "Campera de cuero de inspiración clásica, depurada para el presente. Calce firme, cierres metálicos y una pátina que mejora con cada uso.",
-    materials: "Cuero vacuno plena flor. Forrería de algodón. Cierres YKK.",
-    care: "No lavar. Limpieza profesional especializada en cuero.",
-    colors: ["#4a2e20", "#171412"],
-    colorName: "Tabaco oscuro",
-    sizes: ["S", "M", "L", "XL"],
+      "Sweater masculino de tejido waffle con cuello redondo y mangas largas. Su textura suave y su peso liviano lo convierten en una capa versátil para media estación, tanto en looks casuales como más arreglados.",
+    materials: "100% algodón con tejido waffle texturado.",
+    care: "Lavar con agua fría y colores similares. No usar secadora. Secar extendido.",
+    colors: ["#c8b59b", "#171412", "#3d4b53", "#6a5745"],
+    colorName: "Beige",
+    sizes: ["1", "2", "3", "4", "5", "6"],
   },
 ];
 
@@ -421,7 +420,7 @@ function renderProductDetail(productId) {
     <section class="product-detail fade-in">
       <div class="product-gallery">
         <img src="${product.image}" alt="${product.imageAlt}" />
-        <img class="gallery-secondary" src="${product.image}&sat=-15" alt="Detalle de ${product.name}" />
+        <img class="gallery-secondary" src="${product.image}" alt="Detalle de ${product.name}" />
       </div>
       <div class="product-info">
         <p class="eyebrow">${product.category} — COLECCIÓN 01</p>
